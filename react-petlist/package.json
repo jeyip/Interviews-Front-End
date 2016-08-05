@@ -28,6 +28,7 @@
     "react-router-bootstrap": "^0.20.1",
     "react-router-redux": "^3.0.0",
     "url-loader": "^0.5.7",
+    "whatwg-fetch": "^1.0.0",
     "yargs": "^3.32.0"
   },
   "devDependencies": {
@@ -46,6 +47,7 @@
     "clean-webpack-plugin": "^0.1.6",
     "concurrently": "^2.0.0",
     "copy-webpack-plugin": "^1.1.1",
+    "css-loader": "^0.23.1",
     "debug": "^2.2.0",
     "eslint-config-airbnb": "^10.0.0",
     "eslint-plugin-import": "^1.12.0",
