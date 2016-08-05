@@ -2,20 +2,29 @@ import React from 'react';
 
 function SearchFilters({ toggleAllFilter, toggleBoardingFilter, toggleSittingFilter }) {
   return (
-    <div id="searchFilters">
+    <form id="searchFilters">
       <div>
-        <input name="searchFilter" type="radio" onChange={toggleAllFilter}></input>
-        <p>All</p>
+        <input name="searchFilter" 
+               type="radio" 
+               onChange={toggleAllFilter}>
+        </input>
+        <label>All</label>
       </div>
       <div>
-        <input name="searchFilter" type="radio" onChange={toggleBoardingFilter}></input>
-        <p>Boarding</p>
+        <input name="searchFilter" 
+               type="radio" 
+               onChange={toggleBoardingFilter}>
+        </input>
+        <label>Boarding</label>
       </div>
       <div>
-        <input name="searchFilter" type="radio" onChange={toggleSittingFilter}></input>
-        <p>Sitting</p>
+        <input name="searchFilter" 
+               type="radio" 
+               onChange={toggleSittingFilter}>
+        </input>
+        <label>Sitting</label>
       </div>
-    </div>
+    </form>
   );
 }
 

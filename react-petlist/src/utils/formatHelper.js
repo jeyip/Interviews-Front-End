@@ -17,17 +17,20 @@ module.exports = {
   shortenDescription: (description) => {
     const characterLimit = 47;
     if (description.length > characterLimit) {
+      // case 1: 48th character IS NOT in the middle of a word
       if (description.charAt(characterLimit) === ' ') {
         description = `${description.slice(0, characterLimit)}...`;
-      } else {
-          let j = characterLimit;
-          while (description.charAt(j) !== ' ') {
-            j--;
-            if (description.charAt(j) === ' ') {
-              description = `${description.slice(0, j)}...`;
-              return description;
-            }
+      } 
+      //case 2: 48th character IS in the middle of a word
+      else {
+        let index = characterLimit;
+        while (description.charAt(index) !== ' ') {
+          index--;
+          if (description.charAt(index) === ' ') {
+            description = `${description.slice(0, index)}...`;
+            return description;
           }
+        }
       }
     }
     return description
