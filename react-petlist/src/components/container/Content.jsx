@@ -23,11 +23,14 @@ class Content extends React.Component {
   }
 
   formatSearchResults(results, route) {
+    let result;
+    
     for (let i = 0; i < results.length; i++) {
-      results[i].user.first = capitalizeFirstName(results[i].user.first);
-      results[i].user.last = truncateLastName(results[i].user.last);
-      results[i].description = shortenDescription(results[i].description);
-      results[i].url = formatURL(`http://localhost:3000/${route}`);
+      result = results[i];
+      result.user.first = capitalizeFirstName(result.user.first);
+      result.user.last = truncateLastName(result.user.last);
+      result.description = shortenDescription(result.description);
+      result.url = formatURL(`http://localhost:3000/${route}`);
     }
     return results;
   }
